@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Eventos DOM</title>
+        <style>
+            div#area{
+                font: normal 20pt Arial;
+                background: green;
+                color: white;
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Este é um jeito de ter as Functions dentro do meu HTML5 <div id="area"  onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"</div>-->
+        <div id="area">
+            Interaja....
+        </div>
+
+        <script>
+            
+            var a = window.document.getElementById('area');
+            // Maneira do JS Ouvir o Evendo que vem do Html para ele executar suas Functions dos mesmos.
+            a.addEventListener('click', clicar);
+            a.addEventListener('mouseenter', entrar);
+            a.addEventListener('mouseout', sair);
+
+
+            function clicar(){
+                a.innerHTML = 'Clicou!'
+            }
+
+            function entrar(){
+                a.innerHTML = 'Entrou';
+                a.style.background = 'blue';
+            }
+
+            function sair(){
+                a.innerHTML = 'Saiu';
+                a.style.background = 'pink';
+            }
+        
+        
+        </script>
+
+    
+    </body>
+</html>

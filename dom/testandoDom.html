@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <title>Primeiros Passos com DOM</title>
+
+        <style>
+
+        body{
+            background: rgb(85, 119, 231);
+            color: #ffffff;
+            font: normal 18pt Arial;
+        }    
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Iniciando estudos com DOM</h1>
+        <p>Aqui vai um parágrafo</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+        <div id="msg">Clique em Mim</div>
+        <div id="talk"></div>
+
+        <script>
+            // getElementByTagName pega a tag que eu usei dentro do meu html
+            // [0] é a posição da tag que foi usada primeira se fosse [1] seria a próxima da mesma tag
+            var p1 = window.document.getElementsByTagName('p')[0]
+            // InnerText Dentro de Window.document pega o conteúdo do texto de p1 sem formatação
+            // InnerHtml Escreve no meu Html com a formatação que já existe nas Tags
+            window.document.write('Está escrito assim: ' + p1.innerText)
+
+            // Pego o Elemento usando o getElementById, passando o parâmentro do mesmo
+            /* O mesmo serve para o getElementsByName,caso eu tenha vários names no meu html,
+            eu posso usar a mesma idéia do TagName, passando posição do parâmetro. */
+            // O mesmo serve para o getElementsByClassName, assim como o getElementsByName
+            var d = window.document.getElementById('msg')
+            d.style.background = 'green'
+            d.innerHTML = 'Estou aguardando!!'
+
+            // Faz com que eu possa usar as seleções do css dentro do script para fazer as alterações necessárias, 
+            //por exemplo: div#talk para id, 
+            //div.talk para class e assim em todos os tipos.
+            var t = document.querySelector('div#talk')
+            t.style.background = green;
+            
+
+
+        </script>
+
+    </body>
+
+</html>
