@@ -1,0 +1,20 @@
+input[type=text] {
+  text-align: right;
+  width: 190px;
+  height: 31px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+button{
+  width: 31px;
+  height: 30px;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+button#igual{
+  font-size: 12px;
+  width: 110px;
+  margin: 4px 0;
+}
+

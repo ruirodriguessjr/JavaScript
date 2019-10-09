@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="css/styleCalculadora.css" rel="stylesheet">
+</head>
+<body>
+    <section id="container">
+    </br>
+        <center><input type="text" id="display"/></center>
+        </br>
+        <center>
+            <!-- &nbsp = previne a quebra de linha automática em sua posição.-->
+            &nbsp<input type="reset" value="AC" onclick="limpa()"/>
+            &nbsp<input type="button" name="btn_raiz" value="√" onclick="raiz('√');"/>
+            &nbsp<input type="button" name="btn_mult" value="x" onclick="calcular('*');"/></br></br>
+            
+            &nbsp<input type="button" name="btn_7" value="7" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_8" value="8" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_9" value="9" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_divisao" value="/" onclick="calcular('/');"/></br></br>
+
+            &nbsp<input type="button" name="btn_6" value="6"onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_5" value="5" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_4" value="4" onclick="preencher(value);"/>            
+            &nbsp<input type="button" name="btn_sub" value="-" onclick="calcular('-');"/></br></br>
+            
+            &nbsp<input type="button" name="btn_3" value="3" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_2" value="2" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_1" value="1" onclick="preencher(value);"/>        
+            &nbsp<input type="button" name="btn_soma" value="+" onclick="calcular('+');"/></br></br>
+
+            &nbsp<input type="button" name="btn_0" value="0" onclick="preencher(value);"/>
+            &nbsp<input type="button" name="btn_ponto" value="." onclick="ponto();"/>
+            &nbsp<input type="button" name="btn_igual" value="=" onclick="calcular('=');"/></br></br>
+        </center>
+    </section>
+
+<script src="calculadora.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+input[type]{
+    width: 40px;
+    height: 30px;
+    background:black;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  input[type="reset"]{
+    width: 90px;
+    padding: top
+    
+  }
+  
+  input[name="btn_igual"]{
+    width: 90px;
+    padding: top
+    
+  }
+  
+  
+  #display{
+    width: 187px;
+    height: 50px;
+    background:rgb(241, 241, 238);
+    color: rgb(54, 45, 189);
+    font-weight: bold;
+  }
+  
+  
+  
+  #container{
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    margin-left: 650px;
+    margin-right: 650px;
+    background-color: rgb(82, 80, 80);
+    margin-top: 200px;
+  
+  
+  }
+  

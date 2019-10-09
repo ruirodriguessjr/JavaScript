@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style1.css" rel="stylesheet">
+    <title>Operações</title>
+</head>
+<body>
+    <form name="calc" >
+        <div>
+            <center><input type="text" id="tela"/></center>
+        </div>
+            
+    </form>
+
+    &nbsp<center><button id="7" onclick="armazena(7)">7</button>
+    &nbsp<button id="8"onclick="armazena(8)">8</button>
+    &nbsp<button id="9"onclick="armazena(9)">9</button>
+    &nbsp<button id="raiz" onclick="raizQuadrada()">√</button>
+    &nbsp<button id="limpar" onclick="limpaTela()">CE</button><br></center>
+    &nbsp<center><button id="6"onclick="armazena(6)">6</button>
+    &nbsp<button id="5"onclick="armazena(5)">5</button>
+    &nbsp<button id="4"onclick="armazena(4)">4</button>
+    &nbsp<button id="multiplicacao"onclick="multiplicacao()">x</button>
+    &nbsp<button id="divisao"onclick="divisao()">/</button></center>
+    &nbsp<center><button id="3"onclick="armazena(3)">3</button>
+    &nbsp<button id="2"onclick="armazena(2)">2</button>
+    &nbsp<button id="1"onclick="armazena(1)">1</button> 
+    &nbsp<button id="soma" onclick="soma()">+</button>
+    &nbsp<button id="subtracao"onclick="subtracao()">-</button><br></center>   
+    &nbsp<center><button id="0"onclick="armazena(0)">0</button>
+    &nbsp<button id="virgula"onclick="armazena(10)">,</button>
+    &nbsp<button id="igual"onclick="resultadoIgual()">=</button>
+
+<script src="operacoes.js"></script>
+
+</body>
+
+</html>
