@@ -5,19 +5,17 @@ function createLi(task) {
   var li = document.createElement('li');
   var check = document.createElement('div');
   var text = document.createElement('div');
-  var rm = document.createElement('div');
+  var remove = document.createElement('div');
   
   check.classList.add('check');
   
-  rm.classList.add('remove');
-  rm.textContent = 'Remover';
   
   text.classList.add('text');
   text.textContent = task.description; 
   
-  check.onclick = function () {
+  check.onclick = function () { // Função que controla se meu item da lista está com check ou não.
     
-    if (check == true){
+    if (check == true){ 
       li.classList.remove('done');
       check = false;
 
@@ -27,33 +25,42 @@ function createLi(task) {
     }
   }
   
-  rm.onclick = function () {
-    list.removeChild(li);
+ remove.onclick = function () {
+    list.removeChild(li); // Remove o Primeiro item da Lista Filha
   }
   
-  li.appendChild(check);
-  li.appendChild(text);
-  li.appendChild(rm);
+  li.appendChild(check); // Adiciona uma div check na minha lista
+  li.appendChild(text); // Adiciona uma div text na minha lista
+  li.appendChild(remove); // Adiciona uma div remove na minha lista
   
-  list.appendChild(li);
+  list.appendChild(li); // Adiciono na minha lista 
 }
 
 
-form.onsubmit = function (event) {
+form.onsubmit = function (event) { // Função onde eu pelo o input e adiciono em value
   event.preventDefault();
   var input = this.querySelector('input');
   var value = input.value;
   
-  input.value = '';
+  input.value = ''; // deixo meu input com uma string vazia
   
   createLi({
-    description: value
+    description: value // adiciono a minh alista o valor de value
   });
 }
 
 
-const removeDone = () => {
-  
+function remDone(){
+  document.querySelectorAll("#lista li").forEach((li)=>{ // # = ID
+    if(li.classList.contains("done")){ // Se conter Done na minha lista remover li da minha lista
+     list.removeChild(li);
+    }
+  }
+  );
 }
-
-document.getElementById('rem').onclick() = () => removeDone();
+function remAll(){
+  
+  document.querySelectorAll("#lista li").forEach( // Seleciono todos os itens da lista que forem li e removo eles.
+    (li)=>{ list.removeChild(li);}
+  );
+}
